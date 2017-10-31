@@ -12,7 +12,7 @@
         <!--Push Up Tracker-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="pushuptracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MenuViewController" customModule="pushuptracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,7 +27,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="trackButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="7wj-oa-ZEm"/>
+                                            <action selector="trackButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9rX-3M-LIu"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKa-aF-0Xe">
@@ -62,7 +62,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Push Up Tracker" id="QB3-Wr-iVW"/>
                     <connections>
-                        <outlet property="pushUpRecord" destination="WaG-BW-Da9" id="cjM-c3-dkl"/>
+                        <outlet property="recordLabel" destination="WaG-BW-Da9" id="WW3-rD-oA2"/>
                         <segue destination="4Nz-cQ-JLC" kind="show" identifier="pushUpSegue" id="8vu-G0-6al"/>
                     </connections>
                 </viewController>
@@ -98,10 +98,10 @@
             </objects>
             <point key="canvasLocation" x="1588" y="-355"/>
         </scene>
-        <!--View Controller-->
+        <!--Push Up View Controller-->
         <scene sceneID="uCI-ZI-rZv">
             <objects>
-                <viewController id="4Nz-cQ-JLC" customClass="ViewController" customModule="pushuptracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4Nz-cQ-JLC" customClass="PushUpViewController" customModule="pushuptracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t9l-EM-wI1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -125,6 +125,9 @@
                                                 <state key="normal" title="Stop">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="stopButtonPressed:" destination="4Nz-cQ-JLC" eventType="touchUpInside" id="IrV-RL-c0d"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -142,6 +145,9 @@
                                         <state key="normal" title="Tap Nose to Start">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="noseButtonPressed:" destination="4Nz-cQ-JLC" eventType="touchUpInside" id="Frt-RS-D41"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -155,6 +161,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AAX-Tc-eTx"/>
                     </view>
+                    <connections>
+                        <outlet property="counterLabel" destination="7Wr-g3-cnW" id="cPi-XC-FYy"/>
+                        <outlet property="nameTextField" destination="3v4-kJ-pWe" id="mc0-5B-MQH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rh8-Z3-XJ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
