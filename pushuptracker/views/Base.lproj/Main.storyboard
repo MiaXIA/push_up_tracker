@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0uJ-2y-JeE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0uJ-2y-JeE">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,7 +37,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Gp5-im-i5k" kind="show" id="XvI-Mx-52e"/>
+                                            <segue destination="Gp5-im-i5k" kind="show" identifier="scoresSegue" id="XvI-Mx-52e"/>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pushup" translatesAutoresizingMaskIntoConstraints="NO" id="BNb-6f-fvJ">
@@ -60,7 +60,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Push Up Tracker" id="QB3-Wr-iVW"/>
+                    <navigationItem key="navigationItem" title="Push Up Tracker" id="QB3-Wr-iVW">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="BmD-zi-LWR">
+                            <connections>
+                                <action selector="shareButtonPressed:" destination="BYZ-38-t0r" id="RU0-vZ-ScN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="recordLabel" destination="WaG-BW-Da9" id="WW3-rD-oA2"/>
                         <segue destination="4Nz-cQ-JLC" kind="show" identifier="pushUpSegue" id="8vu-G0-6al"/>
@@ -70,16 +76,16 @@
             </objects>
             <point key="canvasLocation" x="372" y="33.733133433283363"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Scores Table View Controller-->
         <scene sceneID="3hF-sz-PpY">
             <objects>
-                <tableViewController id="Gp5-im-i5k" sceneMemberID="viewController">
+                <tableViewController id="Gp5-im-i5k" customClass="ScoresTableViewController" customModule="pushuptracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="PeC-PL-wU7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="kyz-MV-PO9">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="scoreCell" id="kyz-MV-PO9">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kyz-MV-PO9" id="qwe-Ub-qh3">
