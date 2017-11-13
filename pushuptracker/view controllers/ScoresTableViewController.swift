@@ -29,8 +29,10 @@ class ScoresTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "scoreCell", for: indexPath)
 
         // Configure the cell...
-        
-        cell.textLabel?.text = "\(workouts[indexPath.row].pushupsCompleted)"
+        let workout = workouts[indexPath.row]
+        cell.textLabel?.text = "\(workout.name) - \(workout.pushupsCompleted)"
+        cell.detailTextLabel?.text = workout.startDate.description
+        cell.detailTextLabel?.textColor = .gray
 
         return cell
     }
