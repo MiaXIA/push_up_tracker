@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3B2150321FB1345A00D14685 /* ScoresTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2150311FB1345A00D14685 /* ScoresTableViewController.swift */; };
+		3B4E8A571FBA644A008C006E /* Gym.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4E8A561FBA644A008C006E /* Gym.swift */; };
+		3B4E8A591FBA6514008C006E /* GymFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4E8A581FBA6514008C006E /* GymFinder.swift */; };
+		3B4E8A5B1FBA6DE6008C006E /* GymsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4E8A5A1FBA6DE6008C006E /* GymsTableViewController.swift */; };
 		3BBC25821F95807900EE90DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBC25811F95807900EE90DD /* AppDelegate.swift */; };
 		3BBC25841F95807900EE90DD /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBC25831F95807900EE90DD /* MenuViewController.swift */; };
 		3BBC25871F95807900EE90DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BBC25851F95807900EE90DD /* Main.storyboard */; };
@@ -16,10 +19,15 @@
 		3BBDA3AE1FA7DE5F0007624B /* PushUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBDA3AD1FA7DE5F0007624B /* PushUpViewController.swift */; };
 		3BBDA3B01FA7E4350007624B /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBDA3AF1FA7E4350007624B /* Workout.swift */; };
 		3BBDA3B61FA7E71F0007624B /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBDA3B51FA7E71F0007624B /* Persistance.swift */; };
+		3BD1E8FF1FBA79A6002401EB /* GymTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD1E8FE1FBA79A6002401EB /* GymTableViewCell.swift */; };
+		3BD1E9011FBA7CD9002401EB /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD1E9001FBA7CD9002401EB /* UIImageViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3B2150311FB1345A00D14685 /* ScoresTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresTableViewController.swift; sourceTree = "<group>"; };
+		3B4E8A561FBA644A008C006E /* Gym.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gym.swift; sourceTree = "<group>"; };
+		3B4E8A581FBA6514008C006E /* GymFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymFinder.swift; sourceTree = "<group>"; };
+		3B4E8A5A1FBA6DE6008C006E /* GymsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymsTableViewController.swift; sourceTree = "<group>"; };
 		3BBC257E1F95807900EE90DD /* pushuptracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pushuptracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BBC25811F95807900EE90DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BBC25831F95807900EE90DD /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +38,8 @@
 		3BBDA3AD1FA7DE5F0007624B /* PushUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUpViewController.swift; sourceTree = "<group>"; };
 		3BBDA3AF1FA7E4350007624B /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		3BBDA3B51FA7E71F0007624B /* Persistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistance.swift; sourceTree = "<group>"; };
+		3BD1E8FE1FBA79A6002401EB /* GymTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymTableViewCell.swift; sourceTree = "<group>"; };
+		3BD1E9001FBA7CD9002401EB /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +88,7 @@
 				3BBC25831F95807900EE90DD /* MenuViewController.swift */,
 				3BBDA3AD1FA7DE5F0007624B /* PushUpViewController.swift */,
 				3B2150311FB1345A00D14685 /* ScoresTableViewController.swift */,
+				3B4E8A5A1FBA6DE6008C006E /* GymsTableViewController.swift */,
 			);
 			path = "view controllers";
 			sourceTree = "<group>";
@@ -88,6 +99,7 @@
 				3BBC258A1F95807900EE90DD /* LaunchScreen.storyboard */,
 				3BBC25851F95807900EE90DD /* Main.storyboard */,
 				3BBC25881F95807900EE90DD /* Assets.xcassets */,
+				3BD1E8FE1FBA79A6002401EB /* GymTableViewCell.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -96,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				3BBDA3AF1FA7E4350007624B /* Workout.swift */,
+				3B4E8A561FBA644A008C006E /* Gym.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -104,6 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				3BBDA3B51FA7E71F0007624B /* Persistance.swift */,
+				3B4E8A581FBA6514008C006E /* GymFinder.swift */,
+				3BD1E9001FBA7CD9002401EB /* UIImageViewExtension.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -184,8 +199,13 @@
 				3BBC25821F95807900EE90DD /* AppDelegate.swift in Sources */,
 				3B2150321FB1345A00D14685 /* ScoresTableViewController.swift in Sources */,
 				3BBDA3AE1FA7DE5F0007624B /* PushUpViewController.swift in Sources */,
+				3B4E8A5B1FBA6DE6008C006E /* GymsTableViewController.swift in Sources */,
+				3B4E8A571FBA644A008C006E /* Gym.swift in Sources */,
+				3BD1E9011FBA7CD9002401EB /* UIImageViewExtension.swift in Sources */,
 				3BBDA3B61FA7E71F0007624B /* Persistance.swift in Sources */,
+				3BD1E8FF1FBA79A6002401EB /* GymTableViewCell.swift in Sources */,
 				3BBDA3B01FA7E4350007624B /* Workout.swift in Sources */,
+				3B4E8A591FBA6514008C006E /* GymFinder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

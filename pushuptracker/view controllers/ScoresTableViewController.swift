@@ -13,9 +13,7 @@ class ScoresTableViewController: UITableViewController {
     var workouts:[Workout]!
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        workouts = Persistance.sharedInstance.fetchWorkouts()
+        super.viewDidLoad()        
     }
 
     // MARK: - Table view data source

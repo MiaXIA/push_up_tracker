@@ -46,8 +46,9 @@ class MenuViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "scoresSegue" {
             let workouts = Persistance.sharedInstance.fetchWorkouts()
+            
             let destinationViewController = segue.destination as? ScoresTableViewController
-            destinationViewController?.workouts = workouts.sorted(by: { $0.pushupsCompleted > $1.pushupsCompleted})
+            destinationViewController?.workouts = workouts.sorted(by: { $0.pushupsCompleted > $1.pushupsCompleted })
         }
     }
 }

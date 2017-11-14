@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="nJr-NR-7y4">
-                                <rect key="frame" x="82" y="168.5" width="211.5" height="330"/>
+                                <rect key="frame" x="82" y="141.5" width="211.5" height="384"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdQ-FY-qx1">
                                         <rect key="frame" x="0.0" y="0.0" width="211.5" height="42"/>
@@ -40,11 +40,21 @@
                                             <segue destination="Gp5-im-i5k" kind="show" identifier="scoresSegue" id="XvI-Mx-52e"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2N4-1g-CaZ">
+                                        <rect key="frame" x="0.0" y="108" width="211.5" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Gym Finder">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="yxc-7v-YaO" kind="show" id="1m5-y6-UwM"/>
+                                        </connections>
+                                    </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pushup" translatesAutoresizingMaskIntoConstraints="NO" id="BNb-6f-fvJ">
-                                        <rect key="frame" x="0.0" y="108" width="211.5" height="180"/>
+                                        <rect key="frame" x="0.0" y="162" width="211.5" height="180"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Push up Record: 25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WaG-BW-Da9">
-                                        <rect key="frame" x="0.0" y="300" width="211.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="354" width="211.5" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -75,6 +85,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="372" y="33.733133433283363"/>
+        </scene>
+        <!--Gyms Table View Controller-->
+        <scene sceneID="O19-6g-MYA">
+            <objects>
+                <tableViewController id="yxc-7v-YaO" customClass="GymsTableViewController" customModule="pushuptracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0k2-Ky-XkN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="gymCell" id="Rhw-Ox-k0b" customClass="GymTableViewCell" customModule="pushuptracker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rhw-Ox-k0b" id="uY4-fa-a7H">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Rpo-6s-8xl">
+                                            <rect key="frame" x="5" y="2.5" width="257.5" height="38.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Learner Health &amp; Wellness Center" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARH-aL-lVJ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="257.5" height="26.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="23rd St, Washington DC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7h-nA-z3w">
+                                                    <rect key="frame" x="0.0" y="26.5" width="116.5" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bs1-GG-hsC">
+                                            <rect key="frame" x="267.5" y="2.5" width="102.5" height="38.5"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="bs1-GG-hsC" secondAttribute="bottom" constant="2.5" id="B79-ol-Mil"/>
+                                        <constraint firstItem="bs1-GG-hsC" firstAttribute="top" secondItem="uY4-fa-a7H" secondAttribute="top" constant="2.5" id="Ci2-QV-6t1"/>
+                                        <constraint firstAttribute="trailing" secondItem="bs1-GG-hsC" secondAttribute="trailing" constant="5" id="Cv9-Rw-zB0"/>
+                                        <constraint firstAttribute="bottom" secondItem="Rpo-6s-8xl" secondAttribute="bottom" constant="2.5" id="DY3-3s-1gY"/>
+                                        <constraint firstItem="Rpo-6s-8xl" firstAttribute="leading" secondItem="uY4-fa-a7H" secondAttribute="leading" constant="5" id="Sdb-fv-eJI"/>
+                                        <constraint firstItem="Rpo-6s-8xl" firstAttribute="top" secondItem="uY4-fa-a7H" secondAttribute="top" constant="2.5" id="Vqn-aq-jF4"/>
+                                        <constraint firstAttribute="trailing" secondItem="bs1-GG-hsC" secondAttribute="trailing" constant="5" id="gc9-l0-R4F"/>
+                                        <constraint firstItem="bs1-GG-hsC" firstAttribute="leading" secondItem="Rpo-6s-8xl" secondAttribute="trailing" constant="5" id="tEi-pZ-C6o"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="gymAddressLabel" destination="X7h-nA-z3w" id="Okq-4p-Ieq"/>
+                                    <outlet property="gymLogoImageView" destination="bs1-GG-hsC" id="R72-lK-M3v"/>
+                                    <outlet property="gymNameLabel" destination="ARH-aL-lVJ" id="7be-w2-T5x"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="yxc-7v-YaO" id="Aiw-re-Vfy"/>
+                            <outlet property="delegate" destination="yxc-7v-YaO" id="3UI-VJ-3bS"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pqx-fd-0cB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1588" y="-722.78860569715152"/>
         </scene>
         <!--Scores Table View Controller-->
         <scene sceneID="3hF-sz-PpY">
@@ -118,7 +193,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WKz-Pi-eEa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1588" y="-355"/>
+            <point key="canvasLocation" x="1588" y="34"/>
         </scene>
         <!--Push Up View Controller-->
         <scene sceneID="uCI-ZI-rZv">
@@ -190,7 +265,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rh8-Z3-XJ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1588" y="376.46176911544228"/>
+            <point key="canvasLocation" x="1588" y="817"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9mD-yO-7mJ">
