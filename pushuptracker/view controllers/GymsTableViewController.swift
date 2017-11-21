@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class GymsTableViewController: UITableViewController {
     
@@ -17,7 +18,11 @@ class GymsTableViewController: UITableViewController {
         
         let gymFinder = GymFinder()
         gymFinder.delegate = self
-        gymFinder.fetchNearbyGyms()
+        
+        //progress bar
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        
+        gymFinder.fetchNearbyGymsUsingCodable(latitude: 38.900140, longitude: -77.049447)
     }
 
     // MARK: - Table view data source
@@ -46,6 +51,7 @@ extension GymsTableViewController: NearbyGymDelegate {
         self.gyms = gyms
         
         DispatchQueue.main.async {
+            MBProgressHUD.hide(for:self.view, animated: true)
             self.tableView.reloadData()
         }
     }

@@ -11,6 +11,7 @@
 		3B4E8A571FBA644A008C006E /* Gym.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4E8A561FBA644A008C006E /* Gym.swift */; };
 		3B4E8A591FBA6514008C006E /* GymFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4E8A581FBA6514008C006E /* GymFinder.swift */; };
 		3B4E8A5B1FBA6DE6008C006E /* GymsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4E8A5A1FBA6DE6008C006E /* GymsTableViewController.swift */; };
+		3BAF6AAA1FC3B5E60059218C /* FoursquareStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF6AA91FC3B5E60059218C /* FoursquareStructs.swift */; };
 		3BBC25821F95807900EE90DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBC25811F95807900EE90DD /* AppDelegate.swift */; };
 		3BBC25841F95807900EE90DD /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBC25831F95807900EE90DD /* MenuViewController.swift */; };
 		3BBC25871F95807900EE90DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BBC25851F95807900EE90DD /* Main.storyboard */; };
@@ -21,13 +22,16 @@
 		3BBDA3B61FA7E71F0007624B /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBDA3B51FA7E71F0007624B /* Persistance.swift */; };
 		3BD1E8FF1FBA79A6002401EB /* GymTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD1E8FE1FBA79A6002401EB /* GymTableViewCell.swift */; };
 		3BD1E9011FBA7CD9002401EB /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD1E9001FBA7CD9002401EB /* UIImageViewExtension.swift */; };
+		5E82A153375DCDE8FBAF38BC /* Pods_pushuptracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 800B51B4C7BE078168A15FDE /* Pods_pushuptracker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3045F53BF7690358C194A8AE /* Pods-pushuptracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pushuptracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-pushuptracker/Pods-pushuptracker.release.xcconfig"; sourceTree = "<group>"; };
 		3B2150311FB1345A00D14685 /* ScoresTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresTableViewController.swift; sourceTree = "<group>"; };
 		3B4E8A561FBA644A008C006E /* Gym.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gym.swift; sourceTree = "<group>"; };
 		3B4E8A581FBA6514008C006E /* GymFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymFinder.swift; sourceTree = "<group>"; };
 		3B4E8A5A1FBA6DE6008C006E /* GymsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymsTableViewController.swift; sourceTree = "<group>"; };
+		3BAF6AA91FC3B5E60059218C /* FoursquareStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareStructs.swift; sourceTree = "<group>"; };
 		3BBC257E1F95807900EE90DD /* pushuptracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pushuptracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BBC25811F95807900EE90DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BBC25831F95807900EE90DD /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +44,8 @@
 		3BBDA3B51FA7E71F0007624B /* Persistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistance.swift; sourceTree = "<group>"; };
 		3BD1E8FE1FBA79A6002401EB /* GymTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymTableViewCell.swift; sourceTree = "<group>"; };
 		3BD1E9001FBA7CD9002401EB /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		800B51B4C7BE078168A15FDE /* Pods_pushuptracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pushuptracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3F8A96E3D329830E2D735F9 /* Pods-pushuptracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pushuptracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pushuptracker/Pods-pushuptracker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,17 +53,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E82A153375DCDE8FBAF38BC /* Pods_pushuptracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16C35435BAACE293D8F8DC31 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				800B51B4C7BE078168A15FDE /* Pods_pushuptracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3BAF6AA81FC3B5C60059218C /* codable */ = {
+			isa = PBXGroup;
+			children = (
+				3BAF6AA91FC3B5E60059218C /* FoursquareStructs.swift */,
+			);
+			path = codable;
+			sourceTree = "<group>";
+		};
 		3BBC25751F95807900EE90DD = {
 			isa = PBXGroup;
 			children = (
 				3BBC25801F95807900EE90DD /* pushuptracker */,
 				3BBC257F1F95807900EE90DD /* Products */,
+				861A41825A411EBFD9869FCD /* Pods */,
+				16C35435BAACE293D8F8DC31 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +132,7 @@
 		3BBDA3B31FA7E6DF0007624B /* models */ = {
 			isa = PBXGroup;
 			children = (
+				3BAF6AA81FC3B5C60059218C /* codable */,
 				3BBDA3AF1FA7E4350007624B /* Workout.swift */,
 				3B4E8A561FBA644A008C006E /* Gym.swift */,
 			);
@@ -123,6 +149,15 @@
 			path = utils;
 			sourceTree = "<group>";
 		};
+		861A41825A411EBFD9869FCD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B3F8A96E3D329830E2D735F9 /* Pods-pushuptracker.debug.xcconfig */,
+				3045F53BF7690358C194A8AE /* Pods-pushuptracker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -130,9 +165,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3BBC25901F95807900EE90DD /* Build configuration list for PBXNativeTarget "pushuptracker" */;
 			buildPhases = (
+				2ACB34AA69938F269DBA8FA8 /* [CP] Check Pods Manifest.lock */,
 				3BBC257A1F95807900EE90DD /* Sources */,
 				3BBC257B1F95807900EE90DD /* Frameworks */,
 				3BBC257C1F95807900EE90DD /* Resources */,
+				AD2E8F06CC6FB75ED5526D3E /* [CP] Embed Pods Frameworks */,
+				FDFFFA1234AF28DD8F409008 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -190,6 +228,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2ACB34AA69938F269DBA8FA8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-pushuptracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD2E8F06CC6FB75ED5526D3E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-pushuptracker/Pods-pushuptracker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pushuptracker/Pods-pushuptracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDFFFA1234AF28DD8F409008 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pushuptracker/Pods-pushuptracker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3BBC257A1F95807900EE90DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -198,6 +290,7 @@
 				3BBC25841F95807900EE90DD /* MenuViewController.swift in Sources */,
 				3BBC25821F95807900EE90DD /* AppDelegate.swift in Sources */,
 				3B2150321FB1345A00D14685 /* ScoresTableViewController.swift in Sources */,
+				3BAF6AAA1FC3B5E60059218C /* FoursquareStructs.swift in Sources */,
 				3BBDA3AE1FA7DE5F0007624B /* PushUpViewController.swift in Sources */,
 				3B4E8A5B1FBA6DE6008C006E /* GymsTableViewController.swift in Sources */,
 				3B4E8A571FBA644A008C006E /* Gym.swift in Sources */,
@@ -340,6 +433,7 @@
 		};
 		3BBC25911F95807900EE90DD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3F8A96E3D329830E2D735F9 /* Pods-pushuptracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -354,6 +448,7 @@
 		};
 		3BBC25921F95807900EE90DD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3045F53BF7690358C194A8AE /* Pods-pushuptracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
