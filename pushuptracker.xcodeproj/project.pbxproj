@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3B2150321FB1345A00D14685 /* ScoresTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2150311FB1345A00D14685 /* ScoresTableViewController.swift */; };
+		3B23BE201FCCEB010050AC88 /* LocationFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B23BE1F1FCCEB010050AC88 /* LocationFinder.swift */; };
 		3B4E8A571FBA644A008C006E /* Gym.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4E8A561FBA644A008C006E /* Gym.swift */; };
 		3B4E8A591FBA6514008C006E /* GymFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4E8A581FBA6514008C006E /* GymFinder.swift */; };
 		3B4E8A5B1FBA6DE6008C006E /* GymsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4E8A5A1FBA6DE6008C006E /* GymsTableViewController.swift */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		3045F53BF7690358C194A8AE /* Pods-pushuptracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pushuptracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-pushuptracker/Pods-pushuptracker.release.xcconfig"; sourceTree = "<group>"; };
 		3B2150311FB1345A00D14685 /* ScoresTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresTableViewController.swift; sourceTree = "<group>"; };
+		3B23BE1F1FCCEB010050AC88 /* LocationFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFinder.swift; sourceTree = "<group>"; };
 		3B4E8A561FBA644A008C006E /* Gym.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gym.swift; sourceTree = "<group>"; };
 		3B4E8A581FBA6514008C006E /* GymFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymFinder.swift; sourceTree = "<group>"; };
 		3B4E8A5A1FBA6DE6008C006E /* GymsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymsTableViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				3BBDA3B51FA7E71F0007624B /* Persistance.swift */,
 				3B4E8A581FBA6514008C006E /* GymFinder.swift */,
 				3BD1E9001FBA7CD9002401EB /* UIImageViewExtension.swift */,
+				3B23BE1F1FCCEB010050AC88 /* LocationFinder.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				3B4E8A571FBA644A008C006E /* Gym.swift in Sources */,
 				3BD1E9011FBA7CD9002401EB /* UIImageViewExtension.swift in Sources */,
 				3BBDA3B61FA7E71F0007624B /* Persistance.swift in Sources */,
+				3B23BE201FCCEB010050AC88 /* LocationFinder.swift in Sources */,
 				3BD1E8FF1FBA79A6002401EB /* GymTableViewCell.swift in Sources */,
 				3BBDA3B01FA7E4350007624B /* Workout.swift in Sources */,
 				3B4E8A591FBA6514008C006E /* GymFinder.swift in Sources */,

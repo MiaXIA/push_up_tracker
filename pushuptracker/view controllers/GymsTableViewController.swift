@@ -12,13 +12,20 @@ import MBProgressHUD
 class GymsTableViewController: UITableViewController {
     
     var gyms = [Gym]()
+    let gymFinder = GymFinder()
+    let locationFinder = LocationFinder()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let gymFinder = GymFinder()
         gymFinder.delegate = self
         
+        locationFinder.findLocation()
+        
+        fetchGyms()
+    }
+    
+    func fetchGyms () {
         //progress bar
         MBProgressHUD.showAdded(to: self.view, animated: true)
         
@@ -56,7 +63,25 @@ extension GymsTableViewController: NearbyGymDelegate {
         }
     }
     
-    func gymsNotFound() {
-        print("no gyms :(")
+    func gymsNotFound(reason: GymFinder.FailureReason) {
+        DispatchQueue.main.async {
+            MBProgressHUD.hide(for:self.view, animated: true)
+            
+            let alertController = UIAlertController (title: "Problem fetching gyms", message: reason.rawValue, preferredStyle: .alert)
+            
+            switch reason {
+            case .networkRequestFailed:
+                let retryAction = UIAlertAction(title: "Retry", style: .default, handler: { (action) in
+                    self.fetchGyms()
+                })
+                let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+                alertController.addAction(retryAction)
+                alertController.addAction(cancelAction)
+            case .badJSONResponse, .noData:
+                let okayAction = UIAlertAction(title: "Okay", style: .default, handler: nil)
+                alertController.addAction(okayAction)
+            }
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
 }

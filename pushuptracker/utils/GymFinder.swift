@@ -10,10 +10,16 @@ import Foundation
 
 protocol NearbyGymDelegate {
     func gymsFound(gyms: [Gym])
-    func gymsNotFound()
+    func gymsNotFound(reason: GymFinder.FailureReason)
 }
 
 class GymFinder {
+    
+    enum FailureReason: String {
+        case networkRequestFailed = "Your request failed, please try again."
+        case noData = "No gym data received."
+        case badJSONResponse = "Bad JSON response."
+    }
     
     var delegate: NearbyGymDelegate?
     
@@ -37,13 +43,13 @@ class GymFinder {
         
             //check for valid response with 200 (success)
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                self.delegate?.gymsNotFound()
+                self.delegate?.gymsNotFound(reason: .networkRequestFailed)
                 
                 return
             }
             
             guard let data = data else {
-                self.delegate?.gymsNotFound()
+                self.delegate?.gymsNotFound(reason: .noData)
                 
                 return
             }
@@ -53,7 +59,7 @@ class GymFinder {
             let rootData = try? decoder.decode(Root.self, from: data)
             
             guard let root = rootData else {
-                self.delegate?.gymsNotFound()
+                self.delegate?.gymsNotFound(reason: .badJSONResponse)
                 
                 return
             }
@@ -92,20 +98,20 @@ class GymFinder {
             
             //check for valid response with 200 (success)
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                self.delegate?.gymsNotFound()
+                self.delegate?.gymsNotFound(reason: .networkRequestFailed)
                 
                 return
             }
             
             //check if new data exist
             guard let data = data, let foursquareJsonObject = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] ?? [String: Any]() else {
-                self.delegate?.gymsNotFound()
+                self.delegate?.gymsNotFound(reason: .noData)
                 
                 return
             }
             
             guard let responseJsonObject = foursquareJsonObject["response"] as? [String: Any], let venuesJsonArrayObject = responseJsonObject["venues"] as? [[String: Any]] else {
-                self.delegate?.gymsNotFound()
+                self.delegate?.gymsNotFound(reason: .badJSONResponse)
                 
                 return
             }
@@ -156,17 +162,17 @@ class GymFinder {
                     }
                     else {
                         //TODO: handle failure
-                        self.delegate?.gymsNotFound()
+                        self.delegate?.gymsNotFound(reason: .networkRequestFailed)
                     }
                 }
                 else {
                     //TODO: handle failure
-                    self.delegate?.gymsNotFound()
+                    self.delegate?.gymsNotFound(reason: .noData)
                 }
             }
             else {
                 //TODO: handle failure
-                self.delegate?.gymsNotFound()
+                self.delegate?.gymsNotFound(reason: .badJSONResponse)
             }
         }
         task.resume()
