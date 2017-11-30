@@ -18,18 +18,22 @@ class GymsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //designate self as the receiver of the fetchNearbyGyms callbacks
         gymFinder.delegate = self
         
-        locationFinder.findLocation()
+        locationFinder.delegate = self
         
-        fetchGyms()
+        findLocation()
     }
     
-    func fetchGyms () {
+    func findLocation() {
         //progress bar
         MBProgressHUD.showAdded(to: self.view, animated: true)
-        
-        gymFinder.fetchNearbyGymsUsingCodable(latitude: 38.900140, longitude: -77.049447)
+        locationFinder.findLocation()
+    }
+    
+    func fetchGyms(latitude: Double, longitude: Double) {
+        gymFinder.fetchNearbyGymsUsingCodable(latitude: latitude, longitude: longitude)
     }
 
     // MARK: - Table view data source
@@ -53,6 +57,21 @@ class GymsTableViewController: UITableViewController {
     }
 }
 
+//adhere to the LocationFinderDelegate protocol
+extension GymsTableViewController: LocationFinderDelegate {
+    func locationFound(latitude: Double, longitude: Double) {
+        fetchGyms(latitude: latitude, longitude: longitude)
+    }
+    
+    func locationNotFound() {
+        DispatchQueue.main.async {
+            MBProgressHUD.hide(for: self.view, animated: true)
+        }
+        print("location not found.")
+    }
+}
+
+//adhere to the NearbyGymDelegate protocol
 extension GymsTableViewController: NearbyGymDelegate {
     func gymsFound(gyms: [Gym]) {
         self.gyms = gyms
@@ -72,7 +91,7 @@ extension GymsTableViewController: NearbyGymDelegate {
             switch reason {
             case .networkRequestFailed:
                 let retryAction = UIAlertAction(title: "Retry", style: .default, handler: { (action) in
-                    self.fetchGyms()
+                    self.locationFinder.findLocation()
                 })
                 let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
                 alertController.addAction(retryAction)

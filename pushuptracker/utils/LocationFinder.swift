@@ -9,8 +9,15 @@
 import Foundation
 import CoreLocation
 
+protocol LocationFinderDelegate {
+    func locationFound(latitude: Double, longitude: Double)
+    func locationNotFound()
+}
+
 class LocationFinder: NSObject {
     let locationManager = CLLocationManager()
+    
+    var delegate: LocationFinderDelegate?
     
     override init() {
         super.init()
@@ -26,8 +33,7 @@ class LocationFinder: NSObject {
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
         case .denied, .restricted:
-            //TO DO
-            print("location denied")
+            delegate?.locationNotFound()
         case .authorizedWhenInUse:
             locationManager.requestLocation()
         case .authorizedAlways:
@@ -39,14 +45,20 @@ class LocationFinder: NSObject {
 
 extension LocationFinder: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print(locations.last!)
+        let location = locations.first!
+        delegate?.locationFound(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        //TODO
+        if status == .authorizedWhenInUse {
+            locationManager.requestLocation()
+        } else {
+            delegate?.locationNotFound()
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error.localizedDescription)
+        delegate?.locationNotFound()
     }
 }
